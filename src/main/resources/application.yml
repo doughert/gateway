@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: google_route
+          uri: https://google.com
+          predicates:
+            - Path=/google
+          filters:
+            - RewritePath=/google, /
